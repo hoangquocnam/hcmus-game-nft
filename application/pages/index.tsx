@@ -33,35 +33,35 @@ const Home: NextPage = () => {
     error,
   });
 
-  // 0. Wallet Connect - required to check if they own an NFT
-  if (!address) {
-    return (
-      <div className={styles.container}>
-        <ConnectWallet theme="dark" />
-      </div>
-    );
-  }
+  // // 0. Wallet Connect - required to check if they own an NFT
+  // if (!address) {
+  //   return (
+  //     <div className={styles.container}>
+  //       <ConnectWallet theme="dark" />
+  //     </div>
+  //   );
+  // }
 
-  // 1. Loading
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  // // 1. Loading
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  oldError = error ? error : oldError;
+  // oldError = error ? error : oldError;
 
-  // Something went wrong
-  if (!ownedNfts || isError) {
-    return <div>{`Error: ${oldError}`}</div>;
-  }
+  // // Something went wrong
+  // if (!ownedNfts || isError) {
+  //   return <div>{`Error: ${oldError}`}</div>;
+  // }
 
-  // 2. No NFTs - mint page
-  if (ownedNfts.length === 0) {
-    return (
-      <div className={styles.container}>
-        <MintContainer />
-      </div>
-    );
-  }
+  // // 2. No NFTs - mint page
+  // if (ownedNfts.length === 0) {
+  //   return (
+  //     <div className={styles.container}>
+  //       <MintContainer />
+  //     </div>
+  //   );
+  // }
 
   // 3. Has NFT already - show button to take to game
   return (

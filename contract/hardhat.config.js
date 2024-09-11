@@ -24,6 +24,7 @@ module.exports = {
       chainId: 324,
       zksync: true,
     },
+    
   },
   paths: {
     artifacts: "./artifacts-zk",
