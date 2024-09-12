@@ -7,7 +7,21 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThirdwebProvider
-      activeChain={80001}
+      supportedChains={[
+        {
+          chainId: 80002,
+          name: "Amoy",
+          rpc: ["https://80002.rpc.thirdweb.com"],
+          nativeCurrency: {
+            symbol: "MATIC",
+            decimals: 18,
+            name: "Matic",
+          },
+          testnet: true,
+          slug: "amoy",
+        },
+      ]}
+      activeChain={80002}
       clientId="b1ac8b5dd0851dea860c846e35a6c311"
     >
       <Component {...pageProps} />
